@@ -1,3 +1,7 @@
-import { Route } from '@angular/router';
+import {HomeComponent} from '@acamp/lib/features/home';
+import {Route} from '@angular/router';
 
-export const appRoutes: Route[] = [];
+export const routes: Array<Route> = [
+  {path: '', pathMatch: 'full', redirectTo: 'home'},
+  {path: 'home', component: HomeComponent},
+];

@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import {Component} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [RouterModule],
   selector: 'acamp-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'acamp';
-}
+export class AppComponent {}
