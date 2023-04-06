@@ -1,5 +1,6 @@
 import {AboutComponent} from '@acamp/lib/features/about';
 import {HomeComponent} from '@acamp/lib/features/home';
+import {Obs1Component, Obs2Component} from '@acamp/lib/features/observables';
 import {Route} from '@angular/router';
 
 export const routes: Array<Route> = [
@@ -11,4 +12,6 @@ export const routes: Array<Route> = [
   //   path: 'about-lazy',
   //   loadChildren: () => import('@acamp/lib/features/about').then(module => module.LibFeaturesAboutModule),
   // },
+  {path: 'obs1', component: Obs1Component},
+  {path: 'obs2', component: Obs2Component},
 ];
