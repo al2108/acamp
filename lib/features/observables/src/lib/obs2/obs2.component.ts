@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
 import {Obs2Service} from './obs2.service';
 
 @Component({
