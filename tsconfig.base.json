@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@acamp/lib/features/about": ["lib/features/about/src/index.ts"],
       "@acamp/lib/features/home": ["lib/features/home/src/index.ts"],
       "@acamp/lib/shared/ui": ["lib/shared/ui/src/index.ts"]
     }
