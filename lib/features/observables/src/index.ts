@@ -3,3 +3,4 @@ export {Obs2Component} from './lib/obs2/obs2.component';
 export {Obs3Component} from './lib/obs3/obs3.component';
 export {Obs4Component} from './lib/obs4/obs4.component';
 export {Obs5Component} from './lib/obs5/obs5.component';
+export {Obs6Component} from './lib/obs6/obs6.component';
