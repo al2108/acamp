@@ -1,1 +1,1 @@
-export * from './lib/lib-shared-ui.module';
+export {FormGroupLoggerComponent} from './lib/form-group-logger/form-group-logger.component';
