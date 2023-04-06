@@ -1,4 +1,5 @@
 import {AboutComponent} from '@acamp/lib/features/about';
+import {DialogComponent} from '@acamp/lib/features/dialog';
 import {HomeComponent} from '@acamp/lib/features/home';
 import {
   Obs1Component,
@@ -6,7 +7,7 @@ import {
   Obs3Component,
   Obs4Component,
   Obs5Component,
-  Obs6Component,
+  Obs6Component
 } from '@acamp/lib/features/observables';
 import {Route} from '@angular/router';
 
@@ -25,4 +26,5 @@ export const routes: Array<Route> = [
   {path: 'obs4', component: Obs4Component},
   {path: 'obs5', component: Obs5Component},
   {path: 'obs6', component: Obs6Component},
+  {path: 'dialog', component: DialogComponent}
 ];
