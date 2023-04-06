@@ -2,6 +2,6 @@
 <form form [formGroup]="dialogFormGroup">
     <input formControlName="firstName" />
     <input formControlName="lastName" />
-    <input formControlName="age" />
+    <input formControlName="age" type="number" />
 </form>
 <acamp-form-group-logger [formGroup]="dialogFormGroup" (resetRequested)="onResetRequest()"></acamp-form-group-logger>
