@@ -1,9 +1,12 @@
 <h1>OBS6</h1>
 <h2>Async Pipe directly</h2>
-<pre>{{measuredValues | async | json}}</pre>
+<pre>{{measuredValues1 | async | json}}</pre>
+<pre>{{measuredValues2 | async | json}}</pre>
 
 <h2>Async Pipe with container</h2>
-<ng-container *ngIf="measuredValues | async as values">
-    <pre>{{values | json}}</pre>
-    <pre>{{values | json}}</pre>
+<ng-container *ngIf="measuredValues1| async as values">
+    <pre>Values-1 (first output)
+        {{values | json}}</pre>
+    <pre>Values-1 (second output)
+        {{values | json}}</pre>
 </ng-container>
