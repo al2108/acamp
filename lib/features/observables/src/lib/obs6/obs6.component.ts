@@ -1,6 +1,6 @@
 import {CommonModule} from '@angular/common';
 import {Component, OnInit, inject} from '@angular/core';
-import {Observable, map, throttleTime} from 'rxjs';
+import {Observable, map, tap, throttleTime} from 'rxjs';
 import {Obs6Service, TemperatureMeasurement} from './obs6.service';
 
 interface ExtendedTemperatureMeasurement extends TemperatureMeasurement {
@@ -31,7 +31,9 @@ export class Obs6Component implements OnInit {
         measuredTempCount++;
         return {...value, sum: measuredTempSum, count: measuredTempCount};
       }),
-      throttleTime(5000)
+      tap(value => console.log('after map', value)),
+      throttleTime(5000),
+      tap(value => console.log('after throttle', value))
     );
   }
 }
