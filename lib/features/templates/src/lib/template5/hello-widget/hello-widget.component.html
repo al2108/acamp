@@ -1,0 +1,6 @@
+<div>Hello-Widget</div>
+<ng-container *ngTemplateOutlet="greetingTemplate ?? defaultGreetingTemplate; context: {userData}">
+</ng-container>
+<ng-template #defaultGreetingTemplate>
+    <h1>Hello!</h1>
+</ng-template>

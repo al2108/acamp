@@ -8,8 +8,8 @@ import {AfterViewInit, Component, TemplateRef, ViewChild, ViewContainerRef} from
   styleUrls: ['./hello-widget.component.scss']
 })
 export class HelloWidgetComponent implements AfterViewInit {
-  @ViewChild('greetingContainer', {read: ViewContainerRef}) public greetingContainer!: ViewContainerRef;
-  @ViewChild('defaultGreetingTemplate') public defaultGreeting!: TemplateRef<unknown>;
+  @ViewChild('greetingContainer', {read: ViewContainerRef}) private greetingContainer!: ViewContainerRef;
+  @ViewChild('defaultGreetingTemplate') private defaultGreeting!: TemplateRef<unknown>;
 
   public ngAfterViewInit(): void {
     this.greetingContainer.createEmbeddedView(this.defaultGreeting);

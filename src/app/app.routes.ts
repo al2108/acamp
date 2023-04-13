@@ -14,7 +14,8 @@ import {
   Template1Component,
   Template2Component,
   Template3Component,
-  Template4Component
+  Template4Component,
+  Template5Component
 } from '@acamp/lib/features/templates';
 import {Route} from '@angular/router';
 
@@ -40,5 +41,6 @@ export const routes: Array<Route> = [
   {path: 'template1', component: Template1Component},
   {path: 'template2', component: Template2Component},
   {path: 'template3', component: Template3Component},
-  {path: 'template4', component: Template4Component}
+  {path: 'template4', component: Template4Component},
+  {path: 'template5', component: Template5Component}
 ];

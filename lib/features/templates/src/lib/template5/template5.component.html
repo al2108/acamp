@@ -1,0 +1,13 @@
+<acamp-hello-widget></acamp-hello-widget>
+<acamp-hello-widget [greetingTemplate]="hiTemplate"></acamp-hello-widget>
+<acamp-hello-widget [greetingTemplate]="hoTemplate"></acamp-hello-widget>
+
+<ng-template #hiTemplate let-context="userData">
+    <ng-container *ngIf="context">
+        <h1 class="hi">Hi {{context.name}} you are {{context.age}} years old!</h1>
+    </ng-container>
+</ng-template>
+
+<ng-template #hoTemplate>
+    <h1 class="ho">Ho!</h1>
+</ng-template>
