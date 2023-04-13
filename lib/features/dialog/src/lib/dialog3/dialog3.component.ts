@@ -17,6 +17,7 @@ export class Dialog3Component implements OnInit {
     this.dialogFormGroup = this.createFormGroup();
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   private createFormGroup() {
     const formGroup = new FormGroup({
       firstName: new FormControl('initial Value', {nonNullable: true}),

@@ -7,10 +7,10 @@ import {Obs2Service} from './obs2.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './obs2.component.html',
-  styleUrls: ['./obs2.component.scss'],
+  styleUrls: ['./obs2.component.scss']
 })
 export class Obs2Component implements OnInit {
-  public todos: any;
+  public todos: unknown;
 
   public constructor(private obsService: Obs2Service) {}
 

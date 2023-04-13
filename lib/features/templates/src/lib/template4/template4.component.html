@@ -1,0 +1,11 @@
+<acamp-hello-widget></acamp-hello-widget>
+<acamp-hello-widget [greetingTemplate]="hiTemplate"></acamp-hello-widget>
+<acamp-hello-widget [greetingTemplate]="hoTemplate"></acamp-hello-widget>
+
+<ng-template #hiTemplate>
+    <h1 class="hi">Hi!</h1>
+</ng-template>
+
+<ng-template #hoTemplate>
+    <h1 class="ho">Ho!</h1>
+</ng-template>

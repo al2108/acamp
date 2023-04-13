@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
 import {CommonModule, JsonPipe} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
 import {Obs1Service} from './obs1.service';
 
 @Component({
@@ -7,10 +7,10 @@ import {Obs1Service} from './obs1.service';
   standalone: true,
   imports: [CommonModule, JsonPipe],
   templateUrl: './obs1.component.html',
-  styleUrls: ['./obs1.component.scss'],
+  styleUrls: ['./obs1.component.scss']
 })
 export class Obs1Component implements OnInit {
-  public todos: any;
+  public todos: unknown;
 
   public constructor(private obsService: Obs1Service) {}
 
