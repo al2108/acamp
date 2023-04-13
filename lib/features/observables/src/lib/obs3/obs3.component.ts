@@ -1,11 +1,11 @@
-import {CommonModule} from '@angular/common';
+import {JsonPipe} from '@angular/common';
 import {Component, OnInit} from '@angular/core';
 import {Obs3Service, TodoList} from './obs3.service';
 
 @Component({
   selector: 'acamp-obs3',
   standalone: true,
-  imports: [CommonModule],
+  imports: [JsonPipe],
   templateUrl: './obs3.component.html',
   styleUrls: ['./obs3.component.scss']
 })

@@ -1,4 +1,4 @@
-import {CommonModule} from '@angular/common';
+import {AsyncPipe, JsonPipe, NgIf} from '@angular/common';
 import {Component, OnInit, inject} from '@angular/core';
 import {Observable, map, tap, throttleTime} from 'rxjs';
 import {Obs6Service, TemperatureMeasurement} from './obs6.service';
@@ -11,7 +11,7 @@ interface ExtendedTemperatureMeasurement extends TemperatureMeasurement {
 @Component({
   selector: 'acamp-obs6',
   standalone: true,
-  imports: [CommonModule],
+  imports: [JsonPipe, AsyncPipe, NgIf],
   templateUrl: './obs6.component.html',
   styleUrls: ['./obs6.component.scss']
 })

@@ -1,5 +1,5 @@
 import {Result} from '@acamp/lib/shared/tools';
-import {CommonModule} from '@angular/common';
+import {JsonPipe} from '@angular/common';
 import {HttpErrorResponse} from '@angular/common/http';
 import {Component, OnInit, inject} from '@angular/core';
 import {Obs5Service, TodoList} from './obs5.service';
@@ -7,9 +7,9 @@ import {Obs5Service, TodoList} from './obs5.service';
 @Component({
   selector: 'acamp-obs5',
   standalone: true,
-  imports: [CommonModule],
+  imports: [JsonPipe],
   templateUrl: './obs5.component.html',
-  styleUrls: ['./obs5.component.scss'],
+  styleUrls: ['./obs5.component.scss']
 })
 export class Obs5Component implements OnInit {
   public todos: TodoList;

@@ -1,11 +1,11 @@
-import {CommonModule} from '@angular/common';
+import {JsonPipe} from '@angular/common';
 import {Component, OnInit} from '@angular/core';
 import {Obs2Service} from './obs2.service';
 
 @Component({
   selector: 'acamp-obs2',
   standalone: true,
-  imports: [CommonModule],
+  imports: [JsonPipe],
   templateUrl: './obs2.component.html',
   styleUrls: ['./obs2.component.scss']
 })

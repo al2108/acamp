@@ -1,5 +1,4 @@
 import {FormGroupLoggerComponent} from '@acamp/lib/shared/ui';
-import {CommonModule} from '@angular/common';
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 
@@ -12,7 +11,7 @@ interface UserForm {
 @Component({
   selector: 'acamp-dialog2',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormGroupLoggerComponent],
+  imports: [ReactiveFormsModule, FormGroupLoggerComponent],
   templateUrl: './dialog2.component.html',
   styleUrls: ['./dialog2.component.scss']
 })

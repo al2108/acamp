@@ -1,11 +1,10 @@
 import {Component} from '@angular/core';
-import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'acamp-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {}

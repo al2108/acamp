@@ -1,4 +1,4 @@
-import {CommonModule, JsonPipe} from '@angular/common';
+import {JsonPipe} from '@angular/common';
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {FormGroup, ReactiveFormsModule} from '@angular/forms';
 
@@ -10,7 +10,7 @@ export interface ResetRequest {
 @Component({
   selector: 'acamp-form-group-logger',
   standalone: true,
-  imports: [CommonModule, JsonPipe, ReactiveFormsModule],
+  imports: [JsonPipe, ReactiveFormsModule],
   templateUrl: './form-group-logger.component.html',
   styleUrls: ['./form-group-logger.component.scss']
 })

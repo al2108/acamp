@@ -1,12 +1,11 @@
 import {FormGroupLoggerComponent} from '@acamp/lib/shared/ui';
-import {CommonModule} from '@angular/common';
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'acamp-dialog3',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormGroupLoggerComponent],
+  imports: [ReactiveFormsModule, FormGroupLoggerComponent],
   templateUrl: './dialog3.component.html',
   styleUrls: ['./dialog3.component.scss']
 })

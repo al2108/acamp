@@ -1,5 +1,5 @@
 import {Result} from '@acamp/lib/shared/tools';
-import {CommonModule} from '@angular/common';
+import {JsonPipe} from '@angular/common';
 import {HttpErrorResponse} from '@angular/common/http';
 import {Component, OnInit, inject} from '@angular/core';
 import {Obs7Service, TodoList} from './obs7.service';
@@ -7,7 +7,7 @@ import {Obs7Service, TodoList} from './obs7.service';
 @Component({
   selector: 'acamp-obs7',
   standalone: true,
-  imports: [CommonModule],
+  imports: [JsonPipe],
   templateUrl: './obs7.component.html',
   styleUrls: ['./obs7.component.scss']
 })
