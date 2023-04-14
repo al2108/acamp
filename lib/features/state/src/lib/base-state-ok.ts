@@ -1,9 +1,9 @@
-import {Directive, OnDestroy, inject} from '@angular/core';
-import {AppStateObservable, AppStateService} from './app-state.service';
-import {HttpClient} from '@angular/common/http';
-import {firstValueFrom} from 'rxjs';
-import {SubscriptionSink} from '@acamp/lib/shared/tools';
 import {TodoList, todoListSchema} from '@acamp/lib/shared/data';
+import {IntervalSink, SubscriptionSink} from '@acamp/lib/shared/tools';
+import {HttpClient} from '@angular/common/http';
+import {Directive, OnDestroy, inject} from '@angular/core';
+import {firstValueFrom} from 'rxjs';
+import {AppStateObservable, AppStateService} from './app-state.service';
 
 // Why this?
 @Directive()
@@ -12,17 +12,20 @@ export abstract class BaseStateOk implements OnDestroy {
   protected http: HttpClient;
   protected appState$: AppStateObservable;
   protected subscriptions: SubscriptionSink;
+  protected intervals: IntervalSink;
 
   protected constructor() {
     this.appStateService = inject(AppStateService);
     this.http = inject(HttpClient);
     this.appState$ = this.appStateService.getStateObservable();
     this.subscriptions = new SubscriptionSink();
-    setInterval(async () => this.readTodos(), 5000);
+    this.intervals = new IntervalSink();
+    this.intervals.sink = setInterval(async () => this.readTodos(), 5000);
   }
 
   public ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
+    this.intervals.unset();
   }
 
   // Must not be here, must be in an TodoService somewhere in shared functional logic

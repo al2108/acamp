@@ -1,4 +1,4 @@
-type Timer = NodeJS.Timer;
+type Timer = ReturnType<typeof setInterval>;
 type TimerList = Array<Timer>;
 
 export class IntervalSink {
