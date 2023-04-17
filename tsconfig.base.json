@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@acamp/lib/features/about": ["lib/features/about/src/index.ts"],
+      "@acamp/lib/features/decorators": ["lib/features/decorators/src/index.ts"],
       "@acamp/lib/features/dialog": ["lib/features/dialog/src/index.ts"],
       "@acamp/lib/features/home": ["lib/features/home/src/index.ts"],
       "@acamp/lib/features/observables": ["lib/features/observables/src/index.ts"],
