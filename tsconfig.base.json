@@ -20,6 +20,7 @@
       "@acamp/lib/features/dialog": ["lib/features/dialog/src/index.ts"],
       "@acamp/lib/features/home": ["lib/features/home/src/index.ts"],
       "@acamp/lib/features/observables": ["lib/features/observables/src/index.ts"],
+      "@acamp/lib/features/pipes": ["lib/features/pipes/src/index.ts"],
       "@acamp/lib/features/state": ["lib/features/state/src/index.ts"],
       "@acamp/lib/features/templates": ["lib/features/templates/src/index.ts"],
       "@acamp/lib/shared/data": ["lib/shared/data/src/index.ts"],

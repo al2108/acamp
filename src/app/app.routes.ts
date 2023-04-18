@@ -11,6 +11,7 @@ import {
   Obs6Component,
   Obs7Component
 } from '@acamp/lib/features/observables';
+import {Pipe1Component, Pipe2Component} from '@acamp/lib/features/pipes';
 import {State1Component, State2Component, State3Component, State4Component} from '@acamp/lib/features/state';
 import {
   Template1Component,
@@ -50,5 +51,7 @@ export const routes: Array<Route> = [
   {path: 'state2', component: State2Component},
   {path: 'state3', component: State3Component},
   {path: 'state4', component: State4Component},
-  {path: 'decorator1', component: Decorator1Component}
+  {path: 'decorator1', component: Decorator1Component},
+  {path: 'pipe1', component: Pipe1Component},
+  {path: 'pipe2', component: Pipe2Component}
 ];
