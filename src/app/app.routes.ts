@@ -1,6 +1,7 @@
 import {AboutComponent} from '@acamp/lib/features/about';
 import {Decorator1Component} from '@acamp/lib/features/decorators';
 import {Dialog1Component, Dialog2Component, Dialog3Component, Dialog4Component} from '@acamp/lib/features/dialog';
+import {Directive1Component, Directive2Component} from '@acamp/lib/features/directives';
 import {HomeComponent} from '@acamp/lib/features/home';
 import {
   Obs1Component,
@@ -53,5 +54,7 @@ export const routes: Array<Route> = [
   {path: 'state4', component: State4Component},
   {path: 'decorator1', component: Decorator1Component},
   {path: 'pipe1', component: Pipe1Component},
-  {path: 'pipe2', component: Pipe2Component}
+  {path: 'pipe2', component: Pipe2Component},
+  {path: 'directive1', component: Directive1Component},
+  {path: 'directive2', component: Directive2Component}
 ];
