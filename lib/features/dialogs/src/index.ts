@@ -1,5 +1,1 @@
-export {Dialog1Component} from './lib/dialog1/dialog1.component';
-export {Dialog2Component} from './lib/dialog2/dialog2.component';
-export {Dialog3Component} from './lib/dialog3/dialog3.component';
-export {Dialog4Component} from './lib/dialog4/dialog4.component';
-export {Dialog5Component} from './lib/dialog5/dialog5.component';
+export {dialogRoutes} from './lib/dialog.routes';

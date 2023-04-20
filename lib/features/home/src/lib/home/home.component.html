@@ -1,3 +1,8 @@
 <div class="home">
   <p>Home-Component</p>
+  <div class="buttons">
+    <ng-container *ngFor="let route of routes">
+      <button *ngIf="route.path !== ''" [routerLink]="'/' + route.path">{{ route.path }}</button>
+    </ng-container>
+  </div>
 </div>

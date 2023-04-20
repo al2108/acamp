@@ -22,7 +22,7 @@
       "@acamp/lib/features/home": ["lib/features/home/src/index.ts"],
       "@acamp/lib/features/observables": ["lib/features/observables/src/index.ts"],
       "@acamp/lib/features/pipes": ["lib/features/pipes/src/index.ts"],
-      "@acamp/lib/features/state": ["lib/features/state/src/index.ts"],
+      "@acamp/lib/features/sates": ["lib/features/sates/src/index.ts"],
       "@acamp/lib/features/templates": ["lib/features/templates/src/index.ts"],
       "@acamp/lib/shared/data": ["lib/shared/data/src/index.ts"],
       "@acamp/lib/shared/tools": ["lib/shared/tools/src/index.ts"],

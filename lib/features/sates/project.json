@@ -1,7 +1,7 @@
 {
-  "name": "lib-features-state",
+  "name": "lib-features-sates",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "lib/features/state/src",
+  "sourceRoot": "lib/features/sates/src",
   "prefix": "acamp",
   "tags": [],
   "projectType": "library",
@@ -10,7 +10,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "lib/features/state/jest.config.ts",
+        "jestConfig": "lib/features/sates/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -24,7 +24,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["lib/features/state/**/*.ts", "lib/features/state/**/*.html"]
+        "lintFilePatterns": ["lib/features/sates/**/*.ts", "lib/features/sates/**/*.html"]
       }
     }
   }

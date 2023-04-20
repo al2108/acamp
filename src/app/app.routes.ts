@@ -1,26 +1,11 @@
 import {AboutComponent} from '@acamp/lib/features/about';
-import {Decorator1Component} from '@acamp/lib/features/decorators';
-import {Dialog1Component, Dialog2Component, Dialog3Component, Dialog4Component, Dialog5Component} from '@acamp/lib/features/dialogs';
-import {Directive1Component, Directive2Component} from '@acamp/lib/features/directives';
+import {decoratorRoutes} from '@acamp/lib/features/decorators';
+import {dialogRoutes} from '@acamp/lib/features/dialogs';
+import {directiveRoutes} from '@acamp/lib/features/directives';
 import {HomeComponent} from '@acamp/lib/features/home';
-import {
-  Obs1Component,
-  Obs2Component,
-  Obs3Component,
-  Obs4Component,
-  Obs5Component,
-  Obs6Component,
-  Obs7Component
-} from '@acamp/lib/features/observables';
-import {Pipe1Component, Pipe2Component} from '@acamp/lib/features/pipes';
-import {State1Component, State2Component, State3Component, State4Component} from '@acamp/lib/features/state';
-import {
-  Template1Component,
-  Template2Component,
-  Template3Component,
-  Template4Component,
-  Template5Component
-} from '@acamp/lib/features/templates';
+import {pipeRoutes} from '@acamp/lib/features/pipes';
+import {stateRoutes} from '@acamp/lib/features/sates';
+import {templateRoutes} from '@acamp/lib/features/templates';
 import {Route} from '@angular/router';
 
 export const routes: Array<Route> = [
@@ -32,30 +17,32 @@ export const routes: Array<Route> = [
   //   path: 'about-lazy',
   //   loadChildren: () => import('@acamp/lib/features/about').then(module => module.LibFeaturesAboutModule),
   // },
-  {path: 'obs1', component: Obs1Component},
-  {path: 'obs2', component: Obs2Component},
-  {path: 'obs3', component: Obs3Component},
-  {path: 'obs4', component: Obs4Component},
-  {path: 'obs5', component: Obs5Component},
-  {path: 'obs6', component: Obs6Component},
-  {path: 'obs7', component: Obs7Component},
-  {path: 'dialog1', component: Dialog1Component},
-  {path: 'dialog2', component: Dialog2Component},
-  {path: 'dialog3', component: Dialog3Component},
-  {path: 'dialog4', component: Dialog4Component},
-  {path: 'dialog5', component: Dialog5Component},
-  {path: 'template1', component: Template1Component},
-  {path: 'template2', component: Template2Component},
-  {path: 'template3', component: Template3Component},
-  {path: 'template4', component: Template4Component},
-  {path: 'template5', component: Template5Component},
-  {path: 'state1', component: State1Component},
-  {path: 'state2', component: State2Component},
-  {path: 'state3', component: State3Component},
-  {path: 'state4', component: State4Component},
-  {path: 'decorator1', component: Decorator1Component},
-  {path: 'pipe1', component: Pipe1Component},
-  {path: 'pipe2', component: Pipe2Component},
-  {path: 'directive1', component: Directive1Component},
-  {path: 'directive2', component: Directive2Component}
+  {
+    path: 'observables',
+    loadChildren: () => import('@acamp/lib/features/observables').then(m => m.observableRoutes)
+  },
+  {
+    path: 'dialogs',
+    children: dialogRoutes
+  },
+  {
+    path: 'templates',
+    children: templateRoutes
+  },
+  {
+    path: 'states',
+    children: stateRoutes
+  },
+  {
+    path: 'decorators',
+    children: decoratorRoutes
+  },
+  {
+    path: 'pipes',
+    children: pipeRoutes
+  },
+  {
+    path: 'directives',
+    children: directiveRoutes
+  }
 ];

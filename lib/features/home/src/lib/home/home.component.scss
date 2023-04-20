@@ -1,7 +1,29 @@
 @use '../../../../../../src/styles-dup.scss' as *;
 
 .home {
-    font-size: 24px;
-    font-weight: 400;
-    color: var(--font-color);
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--font-color);
+}
+
+button {
+  padding: 5px;
+  background-color: blue;
+  color: lightblue;
+  border-radius: 5px;
+  border-color: lightblue;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10ch, 1fr));
+  gap: 10px;
 }
