@@ -1,6 +1,6 @@
 import {AboutComponent} from '@acamp/lib/features/about';
 import {Decorator1Component} from '@acamp/lib/features/decorators';
-import {Dialog1Component, Dialog2Component, Dialog3Component, Dialog4Component} from '@acamp/lib/features/dialog';
+import {Dialog1Component, Dialog2Component, Dialog3Component, Dialog4Component, Dialog5Component} from '@acamp/lib/features/dialogs';
 import {Directive1Component, Directive2Component} from '@acamp/lib/features/directives';
 import {HomeComponent} from '@acamp/lib/features/home';
 import {
@@ -43,6 +43,7 @@ export const routes: Array<Route> = [
   {path: 'dialog2', component: Dialog2Component},
   {path: 'dialog3', component: Dialog3Component},
   {path: 'dialog4', component: Dialog4Component},
+  {path: 'dialog5', component: Dialog5Component},
   {path: 'template1', component: Template1Component},
   {path: 'template2', component: Template2Component},
   {path: 'template3', component: Template3Component},

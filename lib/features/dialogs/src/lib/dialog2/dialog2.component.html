@@ -1,0 +1,7 @@
+<h1>Dialog2</h1>
+<form form [formGroup]="dialogFormGroup">
+  <input [formControl]="dialogFormGroup.controls.firstName" />
+  <input [formControl]="dialogFormGroup.controls.lastName" />
+  <input [formControl]="dialogFormGroup.controls.age" type="number" />
+</form>
+<acamp-form-group-logger [formGroup]="dialogFormGroup" (resetRequested)="onResetRequest()"></acamp-form-group-logger>
