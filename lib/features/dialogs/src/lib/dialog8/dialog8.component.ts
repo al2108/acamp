@@ -1,5 +1,5 @@
 import {SubscriptionSink} from '@acamp/lib/shared/tools';
-import {FormGroupLoggerComponent} from '@acamp/lib/shared/ui';
+import {DialogFieldSetContainerComponent, FormGroupLoggerComponent} from '@acamp/lib/shared/ui';
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 
@@ -7,7 +7,7 @@ type CurrencyPosition = 'prefix' | 'suffix';
 
 // We dynymically create a type for our FormGroup, the type changes
 // automatically when we add more elements to our form
-type FormGroupType = ReturnType<Dialog5Component['createFormGroup']>;
+type FormGroupType = ReturnType<Dialog8Component['createFormGroup']>;
 
 interface LocaleSettings {
   decimal: string;
@@ -20,11 +20,11 @@ interface LocaleSettings {
 @Component({
   selector: 'acamp-dialog8',
   standalone: true,
-  imports: [ReactiveFormsModule, FormGroupLoggerComponent],
-  templateUrl: './dialog5.component.html',
-  styleUrls: ['./dialog5.component.scss']
+  imports: [ReactiveFormsModule, FormGroupLoggerComponent, DialogFieldSetContainerComponent],
+  templateUrl: './dialog8.component.html',
+  styleUrls: ['./dialog8.component.scss']
 })
-export class Dialog5Component implements OnInit, OnDestroy {
+export class Dialog8Component implements OnInit, OnDestroy {
   public dialogFormGroup!: FormGroupType;
   public deLocaleSettings!: LocaleSettings;
   public usLocaleSettings!: LocaleSettings;

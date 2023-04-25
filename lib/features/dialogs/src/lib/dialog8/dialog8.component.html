@@ -1,24 +1,24 @@
-<h1>Dialog7 media queries</h1>
+<h1>Dialog8 - container based queries</h1>
 <form form [formGroup]="dialogFormGroup">
-  <acamp-dialog-field-set-media name="Price">
+  <acamp-dialog-field-set-container name="Price">
     <label>Price (de):</label>
     <input [formControl]="dialogFormGroup.controls.price.controls.dePrice" />
     <label>Price (us):</label>
     <input [formControl]="dialogFormGroup.controls.price.controls.usPrice" />
-  </acamp-dialog-field-set-media>
+  </acamp-dialog-field-set-container>
 
-  <acamp-dialog-field-set-media name="Name">
+  <acamp-dialog-field-set-container name="Name">
     <label>Firstname:</label>
     <input [formControl]="dialogFormGroup.controls.name.controls.firstName" />
     <label>Lastname:</label>
     <input [formControl]="dialogFormGroup.controls.name.controls.lastName" />
-  </acamp-dialog-field-set-media>
+  </acamp-dialog-field-set-container>
 
-  <acamp-dialog-field-set-media name="Address">
+  <acamp-dialog-field-set-container name="Address">
     <label>City:</label>
     <input [formControl]="dialogFormGroup.controls.address.controls.city" />
     <label>Street:</label>
     <input [formControl]="dialogFormGroup.controls.address.controls.street" />
-  </acamp-dialog-field-set-media>
+  </acamp-dialog-field-set-container>
 </form>
 <acamp-form-group-logger [formGroup]="dialogFormGroup" (resetRequested)="onResetRequest()"></acamp-form-group-logger>

@@ -1,0 +1,14 @@
+form {
+  display: grid;
+  justify-items: start;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  padding: 5px;
+}
+
+label {
+  justify-self: end;
+}

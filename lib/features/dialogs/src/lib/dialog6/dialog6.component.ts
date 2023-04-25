@@ -18,7 +18,7 @@ interface LocaleSettings {
 }
 
 @Component({
-  selector: 'acamp-dialog7',
+  selector: 'acamp-dialog8',
   standalone: true,
   imports: [ReactiveFormsModule, FormGroupLoggerComponent, DialogFieldSetColsComponent],
   templateUrl: './dialog6.component.html',
