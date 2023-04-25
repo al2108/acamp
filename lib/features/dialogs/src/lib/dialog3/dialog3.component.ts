@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
-  selector: 'acamp-dialog6',
+  selector: 'acamp-dialog7',
   standalone: true,
   imports: [ReactiveFormsModule, FormGroupLoggerComponent],
   templateUrl: './dialog3.component.html',

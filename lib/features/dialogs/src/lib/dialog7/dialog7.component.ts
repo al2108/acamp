@@ -1,14 +1,13 @@
 import {SubscriptionSink} from '@acamp/lib/shared/tools';
-import {FormGroupLoggerComponent} from '@acamp/lib/shared/ui';
+import {DialogFieldSetMediaComponent, FormGroupLoggerComponent} from '@acamp/lib/shared/ui';
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
-import {NgxMaskDirective} from 'ngx-mask';
 
 type CurrencyPosition = 'prefix' | 'suffix';
 
 // We dynymically create a type for our FormGroup, the type changes
 // automatically when we add more elements to our form
-type FormGroupType = ReturnType<Dialog4Component['createFormGroup']>;
+type FormGroupType = ReturnType<Dialog7Component['createFormGroup']>;
 
 interface LocaleSettings {
   decimal: string;
@@ -21,11 +20,11 @@ interface LocaleSettings {
 @Component({
   selector: 'acamp-dialog7',
   standalone: true,
-  imports: [ReactiveFormsModule, FormGroupLoggerComponent, NgxMaskDirective],
-  templateUrl: './dialog4.component.html',
-  styleUrls: ['./dialog4.component.scss']
+  imports: [ReactiveFormsModule, FormGroupLoggerComponent, DialogFieldSetMediaComponent],
+  templateUrl: './dialog7.component.html',
+  styleUrls: ['./dialog7.component.scss']
 })
-export class Dialog4Component implements OnInit, OnDestroy {
+export class Dialog7Component implements OnInit, OnDestroy {
   public dialogFormGroup!: FormGroupType;
   public deLocaleSettings!: LocaleSettings;
   public usLocaleSettings!: LocaleSettings;
@@ -50,9 +49,38 @@ export class Dialog4Component implements OnInit, OnDestroy {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   private createFormGroup() {
     const formGroup = new FormGroup({
+      price: this.createPriceFormGroup(),
+      name: this.createNameFormGroup(),
+      address: this.createAddressFormGroup()
+    });
+    return formGroup;
+  }
+
+  // see comment above about the return type
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  private createPriceFormGroup() {
+    const formGroup = new FormGroup({
       dePrice: new FormControl('', {nonNullable: true}),
-      usPrice: new FormControl('', {nonNullable: true}),
-      phone: new FormControl('', {nonNullable: true})
+      usPrice: new FormControl('', {nonNullable: true})
+    });
+    return formGroup;
+  }
+
+  // see comment above about the return type
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  private createAddressFormGroup() {
+    const formGroup = new FormGroup({
+      street: new FormControl('', {nonNullable: true}),
+      city: new FormControl('', {nonNullable: true})
+    });
+    return formGroup;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  private createNameFormGroup() {
+    const formGroup = new FormGroup({
+      firstName: new FormControl('', {nonNullable: true}),
+      lastName: new FormControl('', {nonNullable: true})
     });
     return formGroup;
   }
