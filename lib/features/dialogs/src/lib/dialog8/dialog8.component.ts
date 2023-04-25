@@ -35,9 +35,7 @@ export class Dialog8Component implements OnInit, OnDestroy {
   }
 
   public ngOnInit(): void {
-    this.setupLocales(); // Get it from the global app state service!
     this.dialogFormGroup = this.createFormGroup();
-    //    this.dialogFormGroup = this.enhanceFormGroup(this.dialogFormGroup);
   }
 
   public ngOnDestroy(): void {
@@ -85,33 +83,7 @@ export class Dialog8Component implements OnInit, OnDestroy {
     return formGroup;
   }
 
-  // private enhanceFormGroup(formGroup: FormGroupType): FormGroupType {
-  //   this.subscriptions.sink = formGroup.controls.phone.valueChanges.subscribe(newValue => {
-  //     if (!newValue.startsWith('+')) {
-  //       formGroup.controls.phone.setValue('+' + newValue);
-  //     }
-  //   });
-  //   return formGroup;
-  // }
-
   public onResetRequest(): void {
     this.dialogFormGroup.reset();
-  }
-
-  private setupLocales(): void {
-    this.deLocaleSettings = {
-      decimal: ',',
-      thousand: '.',
-      priceDecimals: 3,
-      currencySymbol: '€',
-      currencyPosition: 'suffix'
-    }; // Get it from the global app state service!
-    this.usLocaleSettings = {
-      decimal: '.',
-      thousand: ',',
-      priceDecimals: 2,
-      currencySymbol: '$',
-      currencyPosition: 'prefix'
-    };
   }
 }
