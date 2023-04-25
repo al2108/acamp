@@ -1,3 +1,14 @@
+:host {
+  display: block;
+  width: 100%;
+  container-type: inline-size;
+
+  // display: grid;
+  // grid-template-columns: auto;
+  // grid-template-columns: max-content;
+  // grid-template-columns: min-content;
+}
+
 fieldset {
   border-radius: 5px;
 }
@@ -7,11 +18,12 @@ fieldset {
   align-items: center;
   justify-items: start;
   gap: 10px;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: max-content auto;
+  // grid-template-columns: auto auto;
 }
 
-@media (min-width: 600px) {
+@container (min-width: 600px) {
   .fieldset-container {
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: max-content auto max-content auto;
   }
 }

@@ -1,3 +1,8 @@
+:host {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
 form {
   display: grid;
   justify-items: start;
@@ -11,4 +16,9 @@ input {
 
 label {
   justify-self: end;
+}
+
+.blocker {
+  min-width: 200px;
+  background-color: red;
 }
