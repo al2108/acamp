@@ -2,6 +2,7 @@
   display: block;
   width: 100%;
   container-type: inline-size;
+  // container-name: fs;
 
   // display: grid;
   // grid-template-columns: auto;
@@ -22,6 +23,7 @@ fieldset {
   // grid-template-columns: auto auto;
 }
 
+// @container fs (min-width: 600px) {
 @container (min-width: 600px) {
   .fieldset-container {
     grid-template-columns: max-content auto max-content auto;
