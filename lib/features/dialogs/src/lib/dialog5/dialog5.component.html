@@ -1,26 +1,33 @@
 <h1>Dialog5</h1>
 <form form [formGroup]="dialogFormGroup">
-  <label>Price (de):</label>
-  <input
-    [formControl]="dialogFormGroup.controls.dePrice"
-    [mask]="'separator.' + deLocaleSettings.priceDecimals"
-    [thousandSeparator]="deLocaleSettings.thousand"
-    [suffix]="deLocaleSettings.currencyPosition === 'suffix' ? ' ' + deLocaleSettings.currencySymbol : ''"
-    [prefix]="deLocaleSettings.currencyPosition === 'prefix' ? deLocaleSettings.currencySymbol + ' ' : ''" />
+  <fieldset>
+    <legend>Price</legend>
+    <div class="fieldset-container">
+      <label>Price (de):</label>
+      <input [formControl]="dialogFormGroup.controls.price.controls.dePrice" />
+      <label>Price (us):</label>
+      <input [formControl]="dialogFormGroup.controls.price.controls.usPrice" />
+    </div>
+  </fieldset>
 
-  <label>Price (us):</label>
-  <input
-    [formControl]="dialogFormGroup.controls.usPrice"
-    [mask]="'separator.' + usLocaleSettings.priceDecimals"
-    [thousandSeparator]="usLocaleSettings.thousand"
-    [suffix]="usLocaleSettings.currencyPosition === 'suffix' ? ' ' + usLocaleSettings.currencySymbol : ''"
-    [prefix]="usLocaleSettings.currencyPosition === 'prefix' ? usLocaleSettings.currencySymbol + ' ' : ''" />
+  <fieldset>
+    <legend>Name</legend>
+    <div class="fieldset-container">
+      <label>Firstname:</label>
+      <input [formControl]="dialogFormGroup.controls.name.controls.firstName" />
+      <label>Lastname:</label>
+      <input [formControl]="dialogFormGroup.controls.name.controls.lastName" />
+    </div>
+  </fieldset>
 
-  <label>Phone:</label>
-  <input
-    [formControl]="dialogFormGroup.controls.phone"
-    mask="+00 (000) 000-0000"
-    [showMaskTyped]="true"
-    [dropSpecialCharacters]="true" />
+  <fieldset>
+    <legend>Address</legend>
+    <div class="fieldset-container">
+      <label>City:</label>
+      <input [formControl]="dialogFormGroup.controls.address.controls.city" />
+      <label>Street:</label>
+      <input [formControl]="dialogFormGroup.controls.address.controls.street" />
+    </div>
+  </fieldset>
 </form>
 <acamp-form-group-logger [formGroup]="dialogFormGroup" (resetRequested)="onResetRequest()"></acamp-form-group-logger>

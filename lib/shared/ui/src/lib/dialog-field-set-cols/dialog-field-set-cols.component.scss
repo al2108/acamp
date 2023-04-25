@@ -1,0 +1,20 @@
+fieldset {
+  border-radius: 5px;
+}
+
+.fieldset-container {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  gap: 10px;
+}
+
+.fieldset-container-1 {
+  @extend .fieldset-container;
+  grid-template-columns: auto auto;
+}
+
+.fieldset-container-2 {
+  @extend .fieldset-container;
+  grid-template-columns: repeat(4, auto);
+}

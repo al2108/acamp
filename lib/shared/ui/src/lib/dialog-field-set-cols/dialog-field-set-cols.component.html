@@ -1,0 +1,6 @@
+<fieldset>
+  <legend *ngIf="name">{{ name }}</legend>
+  <div [class]="'fieldset-container-' + cols">
+    <ng-content></ng-content>
+  </div>
+</fieldset>

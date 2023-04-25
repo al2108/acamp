@@ -2,7 +2,6 @@ import {SubscriptionSink} from '@acamp/lib/shared/tools';
 import {FormGroupLoggerComponent} from '@acamp/lib/shared/ui';
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
-import {NgxMaskDirective} from 'ngx-mask';
 
 type CurrencyPosition = 'prefix' | 'suffix';
 
@@ -19,9 +18,9 @@ interface LocaleSettings {
 }
 
 @Component({
-  selector: 'acamp-dialog5',
+  selector: 'acamp-dialog6',
   standalone: true,
-  imports: [ReactiveFormsModule, FormGroupLoggerComponent, NgxMaskDirective],
+  imports: [ReactiveFormsModule, FormGroupLoggerComponent],
   templateUrl: './dialog5.component.html',
   styleUrls: ['./dialog5.component.scss']
 })
@@ -50,9 +49,38 @@ export class Dialog5Component implements OnInit, OnDestroy {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   private createFormGroup() {
     const formGroup = new FormGroup({
+      price: this.createPriceFormGroup(),
+      name: this.createNameFormGroup(),
+      address: this.createAddressFormGroup()
+    });
+    return formGroup;
+  }
+
+  // see comment above about the return type
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  private createPriceFormGroup() {
+    const formGroup = new FormGroup({
       dePrice: new FormControl('', {nonNullable: true}),
-      usPrice: new FormControl('', {nonNullable: true}),
-      phone: new FormControl('', {nonNullable: true})
+      usPrice: new FormControl('', {nonNullable: true})
+    });
+    return formGroup;
+  }
+
+  // see comment above about the return type
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  private createAddressFormGroup() {
+    const formGroup = new FormGroup({
+      street: new FormControl('', {nonNullable: true}),
+      city: new FormControl('', {nonNullable: true})
+    });
+    return formGroup;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  private createNameFormGroup() {
+    const formGroup = new FormGroup({
+      firstName: new FormControl('', {nonNullable: true}),
+      lastName: new FormControl('', {nonNullable: true})
     });
     return formGroup;
   }
