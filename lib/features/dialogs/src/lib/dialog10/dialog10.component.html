@@ -1,0 +1,6 @@
+<h1>Dialog10</h1>
+<form>
+    <acamp-quantity-chooser [formControl]="dialogFormGroup.controls.quantity" [increment]="5"></acamp-quantity-chooser>
+    <small *ngIf="dialogFormGroup.controls.quantity.errors">{{dialogFormGroup.controls.quantity.errors | json}}</small>
+</form>
+<acamp-form-group-logger [formGroup]="dialogFormGroup" (resetRequested)="onResetRequest()"></acamp-form-group-logger>
