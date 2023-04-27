@@ -6,7 +6,7 @@ import {NgxMaskDirective} from 'ngx-mask';
 
 type CurrencyPosition = 'prefix' | 'suffix';
 
-// We dynymically create a type for our FormGroup, the type changes
+// We dynamically create a type for our FormGroup, the type changes
 // automatically when we add more elements to our form
 type FormGroupType = ReturnType<Dialog4Component['createFormGroup']>;
 
@@ -46,15 +46,14 @@ export class Dialog4Component implements OnInit, OnDestroy {
   }
 
   // We can't give this method a concrete type (see above FormGroupType)
-  // FormGroupType is infered from the result type of this method
+  // FormGroupType is inferred from the result type of this method
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   private createFormGroup() {
-    const formGroup = new FormGroup({
+    return new FormGroup({
       dePrice: new FormControl('', {nonNullable: true}),
       usPrice: new FormControl('', {nonNullable: true}),
       phone: new FormControl('', {nonNullable: true})
     });
-    return formGroup;
   }
 
   // private enhanceFormGroup(formGroup: FormGroupType): FormGroupType {

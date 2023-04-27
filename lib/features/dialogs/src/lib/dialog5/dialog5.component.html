@@ -1,33 +1,33 @@
 <h1>Dialog5</h1>
-<form form [formGroup]="dialogFormGroup">
-  <fieldset>
-    <legend>Price</legend>
-    <div class="fieldset-container">
-      <label>Price (de):</label>
-      <input [formControl]="dialogFormGroup.controls.price.controls.dePrice" />
-      <label>Price (us):</label>
-      <input [formControl]="dialogFormGroup.controls.price.controls.usPrice" />
-    </div>
-  </fieldset>
+<form [formGroup]="dialogFormGroup">
+    <fieldset>
+        <legend>Price</legend>
+        <div class="fieldset-container">
+            <label>Price (de):</label>
+            <input [formControl]="dialogFormGroup.controls.price.controls.dePrice"/>
+            <label>Price (us):</label>
+            <input [formControl]="dialogFormGroup.controls.price.controls.usPrice"/>
+        </div>
+    </fieldset>
 
-  <fieldset>
-    <legend>Name</legend>
-    <div class="fieldset-container">
-      <label>Firstname:</label>
-      <input [formControl]="dialogFormGroup.controls.name.controls.firstName" />
-      <label>Lastname:</label>
-      <input [formControl]="dialogFormGroup.controls.name.controls.lastName" />
-    </div>
-  </fieldset>
+    <fieldset>
+        <legend>Name</legend>
+        <div class="fieldset-container">
+            <label>Firstname:</label>
+            <input [formControl]="dialogFormGroup.controls.name.controls.firstName"/>
+            <label>Lastname:</label>
+            <input [formControl]="dialogFormGroup.controls.name.controls.lastName"/>
+        </div>
+    </fieldset>
 
-  <fieldset>
-    <legend>Address</legend>
-    <div class="fieldset-container">
-      <label>City:</label>
-      <input [formControl]="dialogFormGroup.controls.address.controls.city" />
-      <label>Street:</label>
-      <input [formControl]="dialogFormGroup.controls.address.controls.street" />
-    </div>
-  </fieldset>
+    <fieldset>
+        <legend>Address</legend>
+        <div class="fieldset-container">
+            <label>City:</label>
+            <input [formControl]="dialogFormGroup.controls.address.controls.city"/>
+            <label>Street:</label>
+            <input [formControl]="dialogFormGroup.controls.address.controls.street"/>
+        </div>
+    </fieldset>
 </form>
 <acamp-form-group-logger [formGroup]="dialogFormGroup" (resetRequested)="onResetRequest()"></acamp-form-group-logger>

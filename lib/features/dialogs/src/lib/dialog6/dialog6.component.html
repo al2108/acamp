@@ -1,24 +1,24 @@
 <h1>Dialog6</h1>
-<form form [formGroup]="dialogFormGroup">
-  <acamp-dialog-field-set-cols name="Price">
-    <label>Price (de):</label>
-    <input [formControl]="dialogFormGroup.controls.price.controls.dePrice" />
-    <label>Price (us):</label>
-    <input [formControl]="dialogFormGroup.controls.price.controls.usPrice" />
-  </acamp-dialog-field-set-cols>
+<form [formGroup]="dialogFormGroup">
+    <acamp-dialog-field-set-cols name="Price">
+        <label>Price (de):</label>
+        <input [formControl]="dialogFormGroup.controls.price.controls.dePrice"/>
+        <label>Price (us):</label>
+        <input [formControl]="dialogFormGroup.controls.price.controls.usPrice"/>
+    </acamp-dialog-field-set-cols>
 
-  <acamp-dialog-field-set-cols name="Name" [cols]="2">
-    <label>Firstname:</label>
-    <input [formControl]="dialogFormGroup.controls.name.controls.firstName" />
-    <label>Lastname:</label>
-    <input [formControl]="dialogFormGroup.controls.name.controls.lastName" />
-  </acamp-dialog-field-set-cols>
+    <acamp-dialog-field-set-cols name="Name" [cols]="2">
+        <label>Firstname:</label>
+        <input [formControl]="dialogFormGroup.controls.name.controls.firstName"/>
+        <label>Lastname:</label>
+        <input [formControl]="dialogFormGroup.controls.name.controls.lastName"/>
+    </acamp-dialog-field-set-cols>
 
-  <acamp-dialog-field-set-cols name="Address" [cols]="1">
-    <label>City:</label>
-    <input [formControl]="dialogFormGroup.controls.address.controls.city" />
-    <label>Street:</label>
-    <input [formControl]="dialogFormGroup.controls.address.controls.street" />
-  </acamp-dialog-field-set-cols>
+    <acamp-dialog-field-set-cols name="Address" [cols]="1">
+        <label>City:</label>
+        <input [formControl]="dialogFormGroup.controls.address.controls.city"/>
+        <label>Street:</label>
+        <input [formControl]="dialogFormGroup.controls.address.controls.street"/>
+    </acamp-dialog-field-set-cols>
 </form>
 <acamp-form-group-logger [formGroup]="dialogFormGroup" (resetRequested)="onResetRequest()"></acamp-form-group-logger>

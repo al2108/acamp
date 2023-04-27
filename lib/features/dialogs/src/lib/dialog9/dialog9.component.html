@@ -1,0 +1,8 @@
+<h1>Dialog9</h1>
+<form [formGroup]="dialogFormGroup">
+    <acamp-special-input [control]="dialogFormGroup.controls.input1"
+                         [config]="input1Config"></acamp-special-input>
+    <acamp-special-input [control]="dialogFormGroup.controls.input2"
+                         [config]="input2Config"></acamp-special-input>
+</form>
+<acamp-form-group-logger [formGroup]="dialogFormGroup" (resetRequested)="onResetRequest()"></acamp-form-group-logger>
