@@ -52,6 +52,10 @@ export class QuantityChooserComponent implements ControlValueAccessor, Validator
     }
   }
 
+  /* ======================================================================================
+   * Control Value Accessor interface implementation
+   * ====================================================================================== */
+
   public writeValue(quantity: number): void {
     this.quantity = quantity;
   }
@@ -74,6 +78,10 @@ export class QuantityChooserComponent implements ControlValueAccessor, Validator
   public setDisabledState(disabled: boolean): void {
     this.disabled = disabled;
   }
+
+  /* ======================================================================================
+   * Validator interface implementation
+   * ====================================================================================== */
 
   public validate(control: AbstractControl): ValidationErrors | null {
     const quantity = control.value;
