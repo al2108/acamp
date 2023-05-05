@@ -16,8 +16,7 @@ interface UserForm {
   styleUrls: ['./dialog2.component.scss']
 })
 export class Dialog2Component implements OnInit {
-  // public dialogFormGroup!: FormGroup<UserForm>;
-  public dialogFormGroup = this.createFormGroup();
+  public dialogFormGroup!: FormGroup<UserForm>;
 
   public ngOnInit(): void {
     this.dialogFormGroup = new FormGroup<UserForm>({
@@ -25,16 +24,6 @@ export class Dialog2Component implements OnInit {
       lastName: new FormControl(''),
       age: new FormControl(10, {nonNullable: true})
     });
-  }
-
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  private createFormGroup() {
-    const formGroup = new FormGroup({
-      firstName: new FormControl('initial Value', {nonNullable: true}),
-      lastName: new FormControl(''),
-      age: new FormControl(10, {nonNullable: true})
-    });
-    return formGroup;
   }
 
   public onResetRequest(): void {

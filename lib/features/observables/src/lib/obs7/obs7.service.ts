@@ -8,16 +8,16 @@ const todoSchema = z
   .object({
     userId: z.number().min(1).max(10),
     id: z.number().min(1).max(200),
-    title: z.string(),
+    // title: z.string(),
     completed: z.boolean(),
     readTimestamp: z.date().default(new Date('1900-01-01')),
     userName: z.string().default('')
   })
   .transform(todo => {
-    const transfomedTodo = {...todo};
-    transfomedTodo.readTimestamp = new Date();
-    transfomedTodo.userName = 'User ' + todo.userId;
-    return transfomedTodo;
+    const transformedTodo = {...todo};
+    transformedTodo.readTimestamp = new Date();
+    transformedTodo.userName = 'User ' + todo.userId;
+    return transformedTodo;
   });
 
 const todoListSchema = z.array(todoSchema);

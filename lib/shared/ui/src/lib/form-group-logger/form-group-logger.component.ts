@@ -22,10 +22,11 @@ export class FormGroupLoggerComponent {
     this.resetRequested = new EventEmitter();
   }
 
-  public onReset(): void {
+  public onReset(event: MouseEvent): void {
     // we could also reset form here direct via:
     // this.formGroup.reset()
     // but this code shall show an event
+    console.log(event);
     this.resetRequested.emit({
       timestamp: Date.now()
     });

@@ -8,4 +8,8 @@ import {HelloWidgetComponent} from './hello-widget/hello-widget.component';
   templateUrl: './template4.component.html',
   styleUrls: ['./template4.component.scss']
 })
-export class Template4Component {}
+export class Template4Component {
+  public onClick(): void {
+    console.log('clicked in template4 component!');
+  }
+}

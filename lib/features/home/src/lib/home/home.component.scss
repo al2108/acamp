@@ -1,3 +1,4 @@
+// Don't import styles that are not used -> View Encapsulation
 @use '../../../../../../src/styles-dup.scss' as *;
 
 .home {

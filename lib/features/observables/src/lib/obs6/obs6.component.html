@@ -4,7 +4,7 @@
 <pre>{{measuredValues2 | async | json}}</pre>
 
 <h2>Async Pipe with container</h2>
-<ng-container *ngIf="measuredValues1| async as values">
+<ng-container *ngIf="measuredValues1 | async as values">
     <pre>Values-1 (first output)
         {{values | json}}</pre>
     <pre>Values-1 (second output)

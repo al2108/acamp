@@ -3,14 +3,14 @@
  * The Result can also contain an error.
  * It is designed to avoid throwing errors,
  * because Typescript has no notion of throws declaration in the method signature.
- * A Result can either conatin a valid result or an error not both.
+ * A Result can either contain a valid result or an error not both.
  */
 import {HttpErrorResponse} from '@angular/common/http';
 
 export class Result<O, E extends Error | HttpErrorResponse> {
   /**
    * Constructor.
-   * The Constrfuctor is only called via the ok() and err() methods.
+   * The constructor is only called via the ok() and err() methods.
    * @param okValue the okValue.
    * @param errorValue the error value.
    */

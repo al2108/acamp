@@ -1,17 +1,19 @@
 import {Directive, ElementRef, HostListener} from '@angular/core';
 
 @Directive({
-  selector: '[acampHighlight]',
+  selector: '[acampExtendedHighlight]',
   standalone: true
 })
 export class ExtendedHighlightDirective {
   public constructor(private el: ElementRef) {}
 
-  @HostListener('mouseenter') public onMouseEnter(): void {
+  @HostListener('mouseenter')
+  public onMouseEnter(): void {
     this.highlight('yellow');
   }
 
-  @HostListener('mouseleave') public onMouseLeave(): void {
+  @HostListener('mouseleave')
+  public onMouseLeave(): void {
     this.highlight('');
   }
 

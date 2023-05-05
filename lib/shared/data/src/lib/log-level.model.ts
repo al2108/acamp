@@ -19,9 +19,8 @@ export const logLevel = {
   Error: 'Error'
 } as const;
 
-// type ObjectValues<T> = T[keyof T];
-// export type LogLevel = ObjectValues<typeof logLevel>;
-export type LogLevel = keyof typeof logLevel;
+type ObjectValues<T> = T[keyof T];
+export type LogLevel = ObjectValues<typeof logLevel>;
 
 const logEnum1 = (logLevel: LogLevelEnum1, message: string): void => {
   console.log(logLevel, message);
@@ -40,9 +39,9 @@ logEnum1(0, 'Debug-Message');
 // logEnum1(LogLevelEnum2.Debug, 'Debug-Message');
 
 logEnum2(LogLevelEnum2.Debug, 'Debug-Message');
-// logEnum2("Debug", 'Debug-Message');
-// logEnum2(LogLevelEnum1.Debug, 'Debug-Message');
+// logEnum2('Debug', 'Debug-Message');
+//logEnum2(LogLevelEnum1.Debug, 'Debug-Message');
 
-log(logLevel.Debug, 'Debug-Message');
+log(logLevel.Info, 'Debug-Message');
 log('Debug', 'Debug-Message');
-// log('Deebug', 'Debug-Message');
+//log('Deebug', 'Debug-Message');

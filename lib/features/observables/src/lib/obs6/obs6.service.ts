@@ -7,10 +7,10 @@ export interface TemperatureMeasurement {
 }
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class Obs6Service {
-  private temperatureSubject: Subject<TemperatureMeasurement>;
+  private readonly temperatureSubject: Subject<TemperatureMeasurement>;
 
   public constructor() {
     this.temperatureSubject = new Subject<TemperatureMeasurement>();
@@ -18,7 +18,7 @@ export class Obs6Service {
       const now: number = Date.now();
       const measurement: TemperatureMeasurement = {
         timestamp: now,
-        temperature: Math.random() * 50 + 10,
+        temperature: Math.random() * 50 + 10
       };
       this.temperatureSubject.next(measurement);
     }, 5000);

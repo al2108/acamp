@@ -18,7 +18,9 @@ export class Obs3Component implements OnInit {
 
   public ngOnInit(): void {
     try {
-      this.obsService.getTodos().then((data: TodoList) => (this.todos = data));
+      this.obsService.getTodos().then((data: TodoList) => {
+        this.todos = data;
+      });
       this.obsService.getTodosError().then((data: TodoList) => (this.todos = data));
       this.obsService
         .getTodosError()
