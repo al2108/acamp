@@ -56,15 +56,6 @@ export class Dialog4Component implements OnInit, OnDestroy {
     });
   }
 
-  // private enhanceFormGroup(formGroup: FormGroupType): FormGroupType {
-  //   this.subscriptions.sink = formGroup.controls.phone.valueChanges.subscribe(newValue => {
-  //     if (!newValue.startsWith('+')) {
-  //       formGroup.controls.phone.setValue('+' + newValue);
-  //     }
-  //   });
-  //   return formGroup;
-  // }
-
   public onResetRequest(): void {
     this.dialogFormGroup.reset();
   }
