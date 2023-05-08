@@ -8,7 +8,7 @@ import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 type FormGroupType = ReturnType<Dialog5Component['createFormGroup']>;
 
 @Component({
-  selector: 'acamp-dialog8',
+  selector: 'acamp-dialog5',
   standalone: true,
   imports: [ReactiveFormsModule, FormGroupLoggerComponent],
   templateUrl: './dialog5.component.html',
@@ -50,20 +50,20 @@ export class Dialog5Component implements OnInit, OnDestroy {
     });
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  private createNameFormGroup() {
+    return new FormGroup({
+      firstName: new FormControl('', {nonNullable: true}),
+      lastName: new FormControl('', {nonNullable: true})
+    });
+  }
+
   // see comment above about the return type
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   private createAddressFormGroup() {
     return new FormGroup({
       street: new FormControl('', {nonNullable: true}),
       city: new FormControl('', {nonNullable: true})
-    });
-  }
-
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  private createNameFormGroup() {
-    return new FormGroup({
-      firstName: new FormControl('', {nonNullable: true}),
-      lastName: new FormControl('', {nonNullable: true})
     });
   }
 

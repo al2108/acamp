@@ -8,7 +8,7 @@ import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 type FormGroupType = ReturnType<Dialog6Component['createFormGroup']>;
 
 @Component({
-  selector: 'acamp-dialog8',
+  selector: 'acamp-dialog6',
   standalone: true,
   imports: [ReactiveFormsModule, FormGroupLoggerComponent, DialogFieldSetColsComponent],
   templateUrl: './dialog6.component.html',

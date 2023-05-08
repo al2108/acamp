@@ -14,4 +14,9 @@ body {
 :root {
   --about-color: green;
   --home-color: blue;
+  --grid-gap: 10px;
+}
+
+input {
+  padding: 5px;
 }

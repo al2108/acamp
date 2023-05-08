@@ -19,7 +19,7 @@ interface LocaleSettings {
 }
 
 @Component({
-  selector: 'acamp-dialog8',
+  selector: 'acamp-dialog4',
   standalone: true,
   imports: [ReactiveFormsModule, FormGroupLoggerComponent, NgxMaskDirective],
   templateUrl: './dialog4.component.html',

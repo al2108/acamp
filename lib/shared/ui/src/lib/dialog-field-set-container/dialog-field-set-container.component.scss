@@ -1,12 +1,12 @@
 :host {
-  display: block;
+  // display: block;
   width: 100%;
   container-type: inline-size;
-  // container-name: fs;
+  container-name: fs;
 
-  // display: grid;
+  display: grid;
   // grid-template-columns: auto;
-  // grid-template-columns: max-content;
+  grid-template-columns: max-content;
   // grid-template-columns: min-content;
 }
 
@@ -17,15 +17,14 @@ fieldset {
 .fieldset-container {
   display: grid;
   align-items: center;
-  justify-items: start;
   gap: 10px;
-  grid-template-columns: max-content auto;
+  grid-template-columns: 10ch 200px;
   // grid-template-columns: auto auto;
 }
 
-// @container fs (min-width: 600px) {
-@container (min-width: 600px) {
+@container fs (min-width: 600px) {
+  //@container (min-width: 600px) {
   .fieldset-container {
-    grid-template-columns: max-content auto max-content auto;
+    grid-template-columns: 10ch 200px 10ch 200px;
   }
 }

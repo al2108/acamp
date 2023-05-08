@@ -8,7 +8,7 @@ import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 type FormGroupType = ReturnType<Dialog7Component['createFormGroup']>;
 
 @Component({
-  selector: 'acamp-dialog8',
+  selector: 'acamp-dialog7',
   standalone: true,
   imports: [ReactiveFormsModule, FormGroupLoggerComponent, DialogFieldSetMediaComponent],
   templateUrl: './dialog7.component.html',
