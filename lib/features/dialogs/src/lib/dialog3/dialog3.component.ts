@@ -18,12 +18,11 @@ export class Dialog3Component implements OnInit {
 
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   private createFormGroup() {
-    const formGroup = new FormGroup({
+    return new FormGroup({
       firstName: new FormControl('initial Value', {nonNullable: true}),
       lastName: new FormControl(''),
       age: new FormControl(10, {nonNullable: true})
     });
-    return formGroup;
   }
 
   public onResetRequest(): void {
