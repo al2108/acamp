@@ -1,7 +1,7 @@
 form {
   display: grid;
   grid-template-columns: max-content;
-  gap: 10px;
+  gap: var(--grid-gap);
 }
 
 small {

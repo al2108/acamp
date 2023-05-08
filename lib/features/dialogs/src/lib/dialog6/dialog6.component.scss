@@ -2,13 +2,6 @@ form {
   display: grid;
   justify-items: start;
   align-items: center;
-  gap: 10px;
+  gap: var(--grid-gap);
 }
 
-input {
-  padding: 5px;
-}
-
-label {
-  justify-self: end;
-}

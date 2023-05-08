@@ -1,15 +1,8 @@
 form {
   display: grid;
   grid-template-columns: 10ch 200px;
-  gap: 10px;
+  gap: var(--grid-gap);
   justify-items: start;
   align-items: center;
 }
 
-input {
-  padding: 5px;
-}
-
-label {
-  justify-self: end;
-}
